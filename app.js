@@ -5,7 +5,15 @@ const OwnerID = "130515926117253122";
 
 const prefix = "!"
 
-
+//thing
+const marryWords = ["Boku marry me", "boku marry me", "Boku Marry Me", "BOKU MARRY ME"];
+client.on("message", (message) => {
+  if( marryWords.some(word => message.content.includes(word)) ) {
+    var prs = `<@${message.author.id}>`
+    message.channel.sendMessage(">marry " + prs)
+  }
+});
+//thing end
 
 Client.on("ready", () => {
 	console.log("online");
